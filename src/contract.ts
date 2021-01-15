@@ -20,6 +20,7 @@ export function handle(state: StateInterface, action: ActionInterface): { state:
   const extensions: ExtensionInterface[] = state.extensions;
   const input: InputInterface = action.input;
   const caller: string = action.caller;
+  //const markets: MarketInterface[] = state.markets;
 
   /** Transfer Function */
   if (input.function === 'transfer') {
@@ -393,6 +394,20 @@ export function handle(state: StateInterface, action: ActionInterface): { state:
     } else {
       throw new ContractError('Invalid vote type.');
     }
+
+    return { state };
+  }
+
+  /** Propose Function */
+  if (input.function === 'createMarket') {
+    const voteType = input.type;
+
+    const note = input.note;
+    if(typeof note !== 'string') {
+      throw new ContractError('Note format not recognized.');
+    }
+
+
 
     return { state };
   }
