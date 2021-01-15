@@ -71,6 +71,18 @@ export interface VoteInterface {
   lockLength?: number;
 }
 
+export interface MarketInterface{
+  startTime?: number; //unix time number instead of date object.
+  lastUpdate?: number;
+  yays?: number;
+  nays?: number;
+  name?: string;
+  description?: string;
+  link?: string;
+  open?: bool; //is this "bool", or "boolean"
+  voters?: string[]
+}
+
 export interface ResultInterface {
   target: string;
   balance: number;

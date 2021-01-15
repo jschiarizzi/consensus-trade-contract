@@ -20,7 +20,7 @@ export function handle(state: StateInterface, action: ActionInterface): { state:
   const extensions: ExtensionInterface[] = state.extensions;
   const input: InputInterface = action.input;
   const caller: string = action.caller;
-  //const markets: MarketInterface[] = state.markets;
+  const markets: MarketInterface[] = state.markets;
 
   /** Transfer Function */
   if (input.function === 'transfer') {
