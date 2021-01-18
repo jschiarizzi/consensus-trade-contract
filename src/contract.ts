@@ -6,7 +6,8 @@ import {
   InputInterface,
   VaultInterface,
   VaultParamsInterface,
-  ExtensionInterface
+  ExtensionInterface,
+  MarketInterface
 } from "./faces";
 
 declare const ContractError: any;
