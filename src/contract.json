@@ -1,17 +1,18 @@
 {
-  "name": "My DAO Name",
-  "ticker": "TOK",
+  "name": "My Market",
+  "ticker": "CT",
   "balances": {
-    "uhE-QeYS8i4pmUtnxQyHD7dzXFNaJ9oMK-IM-QPNY6M": 10000000
+    "O6SGGaUbSm72rQO-9A7SGFUIGOiSy8Uih1-zbQmufaU": 10000000
   },
   "vault": {
-    "uhE-QeYS8i4pmUtnxQyHD7dzXFNaJ9oMK-IM-QPNY6M": [{
+    "O6SGGaUbSm72rQO-9A7SGFUIGOiSy8Uih1-zbQmufaU": [{
       "balance": 1000,
       "end": 100,
       "start": 0
     }]
   },
   "votes": [],
+  "markets": [],
   "roles": {},
   "settings": [
     ["quorum", 0.5],

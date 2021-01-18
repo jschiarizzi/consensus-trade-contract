@@ -405,7 +405,9 @@ export function handle(state: StateInterface, action: ActionInterface): { state:
     const note = input.note;
     if(typeof note !== 'string') {
       throw new ContractError('Note format not recognized.');
-    }
+    };
+
+    const totalWeight = 1.0;
 
     let vote: VoteInterface = {
       status: 'active',
@@ -415,10 +417,10 @@ export function handle(state: StateInterface, action: ActionInterface): { state:
       nays: 0,
       voted: [],
       start: +SmartWeave.block.height,
-      1
+      totalWeight
     };
 
-    markets.push(vote)
+    markets.push(vote);
 
     return { state };
   }

@@ -7,6 +7,7 @@ export interface StateInterface {
   roles: RoleInterface;
   settings: [string, any][];
   extensions: ExtensionInterface[];
+  markets: MarketInterface[];
 }
 
 export interface RoleInterface {
@@ -79,7 +80,7 @@ export interface MarketInterface{
   name?: string;
   description?: string;
   link?: string;
-  open?: bool; //is this "bool", or "boolean"
+  open?: boolean; //is this "bool", or "boolean"
   voters?: string[]
 }
 
