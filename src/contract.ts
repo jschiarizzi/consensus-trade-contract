@@ -398,7 +398,7 @@ export function handle(state: StateInterface, action: ActionInterface): { state:
     return { state };
   }
 
-  /** Propose Function */
+  /** createMarket Function */
   if (input.function === 'createMarket') {
     const voteType = input.type;
 
@@ -407,7 +407,18 @@ export function handle(state: StateInterface, action: ActionInterface): { state:
       throw new ContractError('Note format not recognized.');
     }
 
+    let vote: VoteInterface = {
+      status: 'active',
+      type: voteType,
+      note,
+      yays: 0,
+      nays: 0,
+      voted: [],
+      start: +SmartWeave.block.height,
+      1
+    };
 
+    markets.push(vote)
 
     return { state };
   }
@@ -421,7 +432,7 @@ export function handle(state: StateInterface, action: ActionInterface): { state:
       throw new ContractError('Invalid value for "id". Must be an integer.');
     }
 
-    const vote = votes[id];
+    const vote = markets[id];
 
     let voterBalance = 0;
     if(caller in vault) {
