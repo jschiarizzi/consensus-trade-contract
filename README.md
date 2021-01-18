@@ -1,9 +1,9 @@
 # Community Contract Specs
-Deployed Contract Address: `YggvBIHYIihBoWsWJg4wBeTDQUBR7KVZG62o2DFYWr0`
+Deployed Contract Address: `Contract ID: EizpnspCV3x4Gc8H11X5JzKF9NRUzCeDC-jhU6gC9es`
 
 [![Gitopia](https://img.shields.io/endpoint?style=&url=https://gitopia.org/mirror-badge.json)](https://gitopia.org/?#/BPr7vrFduuQqqVMu_tftxsScTKUq9ke0rx4q5C9ieQU/community-contract)
 
-Community is a frontend, library (in Javascript) and a SmartWeave contract, to create new communities completely decentralized. 
+Community is a frontend, library (in Javascript) and a SmartWeave contract, to create new communities completely decentralized.
 
 These are the contract's specs.
 
@@ -24,7 +24,7 @@ The community state has the following default structure:
       start: number // At what block the lock starts.
     }]
   },
-  votes: VoteInterface[], 
+  votes: VoteInterface[],
   roles: {
       [key: string]: string
   },
@@ -81,7 +81,7 @@ interface VoteInterface {
 
 ### Transfer
 Holders are able to transfer them to someone else on Arweave, not only to other Community members but to anyone else.
-#### Requires: 
+#### Requires:
 - **target**: To whom the balance is going to be transfered.
 - **qty**: How many tokens to transfer.
 

@@ -400,7 +400,7 @@ export function handle(state: StateInterface, action: ActionInterface): { state:
   }
 
   /** createMarket Function */
-  if (input.function === 'createMarket') {
+  if (input.function == 'createMarket') {
     const voteType = input.type;
 
     const note = input.note;

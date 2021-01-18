@@ -343,7 +343,7 @@ function handle(state, action) {
         return { state: state };
     }
     /** createMarket Function */
-    if (input.function === 'createMarket') {
+    if (input.function == 'createMarket') {
         var voteType = input.type;
         var note = input.note;
         if (typeof note !== 'string') {

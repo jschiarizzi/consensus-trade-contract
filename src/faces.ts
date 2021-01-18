@@ -73,7 +73,7 @@ export interface VoteInterface {
 }
 
 export interface MarketInterface{
-  startTime?: number; //unix time number instead of date object.
+  start?: number; //unix time number instead of date object.
   lastUpdate?: number;
   yays?: number;
   nays?: number;
@@ -81,7 +81,7 @@ export interface MarketInterface{
   description?: string;
   link?: string;
   open?: boolean; //is this "bool", or "boolean"
-  voters?: string[]
+  voted?: string[]
 }
 
 export interface ResultInterface {
@@ -93,4 +93,4 @@ export interface ResultInterface {
 export type VoteStatus = 'active' | 'quorumFailed' | 'passed' | 'failed';
 export type VoteType = 'mint' | 'mintLocked' | 'burnVault' | 'indicative' | 'set';
 export type GetFunctionType = 'balance' | 'unlockedBalance' | 'vaultBalance' | 'role';
-export type SetFunctionType = 'transfer' | 'transferLocked' | 'vote' | 'propose' | 'finalize' | 'lock' | 'increaseVault' | 'unlock' | 'extend';
+export type SetFunctionType = 'createMarket' | 'transfer' | 'transferLocked' | 'vote' | 'propose' | 'finalize' | 'lock' | 'increaseVault' | 'unlock' | 'extend';
